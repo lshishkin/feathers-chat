@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Chat Application</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="pull-right">
+        <span id="logout-icon" title="Logout?"><i class="fas fa-sign-out-alt" aria-hidden="true"></i></span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="app-title">
+        <h2 class="center-text">Feathers Chat Application</h2>
+      </div>
+    </div>
+    <div class="row">
+
+      <!-- left content area  -->
+
+      <div class="col-md-3 margin-top">
+        <div class="media">
+          <div class="media-left media-middle">
+            <a href="#">
+              <img src="https://d1nhio0ox7pgb.cloudfront.net/_img/o_collection_png/green_dark_grey/256x256/plain/user.png" alt="32X32 user image"
+                class="media-object" style="width:32px; height:32px">
+            </a>
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">Sam Smith</h4>
+          </div>
+        </div>
+        <div class="media">
+          <div class="media-left media-middle">
+            <a href="#">
+              <img src="https://d1nhio0ox7pgb.cloudfront.net/_img/o_collection_png/green_dark_grey/256x256/plain/user.png" alt="32X32 user image"
+                class="media-object" style="width:32px; height:32px">
+            </a>
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">Sam Smith</h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- end left content area  -->
+
+      <!-- right content area  -->
+
+      <div class="col-md-9 margin-top main-border">
+        <div class="media">
+          <div class="media-left">
+            <a href="#">
+              <img src="https://d1nhio0ox7pgb.cloudfront.net/_img/o_collection_png/green_dark_grey/256x256/plain/user.png" alt="64X64 user image"
+                class="media-object" style="width:64px; height:64px">
+            </a>
+          </div>
+          <div class="media-body">
+            <div class="pull-right">
+              <span class="delete-comment" title="Delete comment?">
+                <i class="fa fa-times" aria-hidden="true"></i>
+              </span>
+            </div>
+            <h4 class="media-heading">John Smith</h4>
+            <span class="comment-date">03-04-2016 10:43am</span>
+            <br/>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus suscipit porro similique incidunt quam nesciunt pariatur
+            debitis illo ea deserunt voluptatem, placeat, ratione est alias tempore ullam maxime voluptate laudantium!
+          </div>
+        </div>
+        <div class="media">
+          <div class="media-left">
+            <a href="#">
+              <img src="https://d1nhio0ox7pgb.cloudfront.net/_img/o_collection_png/green_dark_grey/256x256/plain/user.png" alt="64X64 user image"
+                class="media-object" style="width:64px; height:64px">
+            </a>
+          </div>
+          <div class="media-body">
+            <div class="pull-right">
+              <span class="delete-comment" title="Delete comment?">
+                <i class="fa fa-times" aria-hidden="true"></i>
+              </span>
+            </div>
+            <h4 class="media-heading">John Smith</h4>
+            <span class="comment-date">03-04-2016 10:43am</span>
+            <br/>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus suscipit porro similique incidunt quam nesciunt pariatur
+            debitis illo ea deserunt voluptatem, placeat, ratione est alias tempore ullam maxime voluptate laudantium!
+          </div>
+        </div>
+        <div class="margin-top">
+          <form>
+            <textarea class="form-control" rows="3" placeholder="Enter Message..."></textarea>
+            <button class="btn btn-primary pull-right margin-top">Submit</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- end right content area  -->
+
+    </div>
+  </div>
+
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/core-js/2.1.4/core.min.js"></script>
+  <script src="//unpkg.com/@feathersjs/client@^3.0.0/dist/feathers.js"></script>
+  <script src="//unpkg.com/socket.io-client@1.7.3/dist/socket.io.js"></script>
+</body>
+
+</html>

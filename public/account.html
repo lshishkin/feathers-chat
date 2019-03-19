@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/master.css">
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2 col-md-offset-5">
+                <h3>Create new accont</h3>
+                <br/>
+
+                <form id="new-user-form">
+                    <label>Email</label>
+                    <input id="email" type="text" class="form-control" name="email" placeholder="Enter your email">
+                    <label>Password</label>
+                    <input id="password" type="text" class="form-control" name="email" placeholder="Enter your password">
+                    <div>
+                        <a href="#">Already have an account? Login here.</a>
+                    </div>
+                    <br/>
+                    <input type="submit" class="btn btn-primary">
+                </form>
+                <br/>
+                <div id="error-message" class="alert alert-danger">
+                    There was an error proccecing your trequest!
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--jquery-->
+
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+    <!--feathers-->
+
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/core-js/2.1.4/core.min.js"></script>
+    <script src="//unpkg.com/@feathersjs/client@^3.0.0/dist/feathers.js"></script>
+    <script src="//unpkg.com/socket.io-client@1.7.3/dist/socket.io.js"></script>
+
+    <!--custom-->
+
+    <script src="./js/account.js"></script>
+</body>
+
+</html>
