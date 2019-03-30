@@ -24,34 +24,29 @@ $(document).ready(
         function getCredentials() {
             var user = {
                 email: $('#email').val(),
-                password: $('#password').val(),
-                username: $('#username').val()
+                password: $('#password').val()
             }
             return user
         }
 
-        /* 
-             Handle form submittal
-        */
-
-        $('#new-user-form').submit(
-            function(e){
-                e.preventDefault()
-                var userCredentials=getCredentials()
-                console.log(userCredentials)
-
-                //create a new user using the feathers client
-
-                usersService.create(userCredentials)
-                .then((res)=>{
-                    console.log(res)
-                    window.location.href=`${serverurl}/login.html`
-                }).catch((err)=>{
-                    $('#error-message')
-                    .text(`There was an error! ${err}.`)
+        $("#login-user-form").submit(function (e) {
+            e.preventDefault()
+            var userCredentials = getCredentials()
+            client.authenticate({
+                strategy: 'local',
+                email: userCredentials.email,
+                password: userCredentials.password
+            })
+                .then((token) => {
+                    window.location.href = `${serverurl}`
+                })
+                .catch((err) => {
+                    $("#error-message")
+                    .text(`Error login. ${err.message}`)
                     .show()
                 })
-            }
-        )
+        })
+
+
     }
 )

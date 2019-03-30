@@ -60,50 +60,14 @@
       <!-- right content area  -->
 
       <div class="col-md-9 margin-top main-border">
-        <div class="media">
-          <div class="media-left">
-            <a href="#">
-              <img src="https://d1nhio0ox7pgb.cloudfront.net/_img/o_collection_png/green_dark_grey/256x256/plain/user.png" alt="64X64 user image"
-                class="media-object" style="width:64px; height:64px">
-            </a>
-          </div>
-          <div class="media-body">
-            <div class="pull-right">
-              <span class="delete-comment" title="Delete comment?">
-                <i class="fa fa-times" aria-hidden="true"></i>
-              </span>
-            </div>
-            <h4 class="media-heading">John Smith</h4>
-            <span class="comment-date">03-04-2016 10:43am</span>
-            <br/>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus suscipit porro similique incidunt quam nesciunt pariatur
-            debitis illo ea deserunt voluptatem, placeat, ratione est alias tempore ullam maxime voluptate laudantium!
-          </div>
+        <div id="chat-area">
+       
         </div>
-        <div class="media">
-          <div class="media-left">
-            <a href="#">
-              <img src="https://d1nhio0ox7pgb.cloudfront.net/_img/o_collection_png/green_dark_grey/256x256/plain/user.png" alt="64X64 user image"
-                class="media-object" style="width:64px; height:64px">
-            </a>
-          </div>
-          <div class="media-body">
-            <div class="pull-right">
-              <span class="delete-comment" title="Delete comment?">
-                <i class="fa fa-times" aria-hidden="true"></i>
-              </span>
-            </div>
-            <h4 class="media-heading">John Smith</h4>
-            <span class="comment-date">03-04-2016 10:43am</span>
-            <br/>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus suscipit porro similique incidunt quam nesciunt pariatur
-            debitis illo ea deserunt voluptatem, placeat, ratione est alias tempore ullam maxime voluptate laudantium!
-          </div>
-        </div>
+
         <div class="margin-top">
-          <form>
-            <textarea class="form-control" rows="3" placeholder="Enter Message..."></textarea>
-            <button class="btn btn-primary pull-right margin-top">Submit</button>
+          <form id="submit-message-form">
+            <textarea id="msg-text" class="form-control" rows="3" placeholder="Enter Message..."></textarea>
+            <button class="btn btn-primary pull-right margin-top" type="submit">Submit</button>
           </form>
         </div>
       </div>
@@ -113,9 +77,21 @@
     </div>
   </div>
 
+  <!--jquery-->
+
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+  <!--feathers-->
+
   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/core-js/2.1.4/core.min.js"></script>
   <script src="//unpkg.com/@feathersjs/client@^3.0.0/dist/feathers.js"></script>
   <script src="//unpkg.com/socket.io-client@1.7.3/dist/socket.io.js"></script>
+
+  <!--custom-->
+
+  <script src="./js/index.js"></script>
+
 </body>
 
 </html>

@@ -1,10 +1,9 @@
-const authentication = require('feathers-authentication');
-const jwt = require('feathers-authentication-jwt');
-const local = require('feathers-authentication-local');
+const authentication = require('@feathersjs/authentication');
+const jwt = require('@feathersjs/authentication-jwt');
+const local = require('@feathersjs/authentication-local');
 
 
-module.exports = function () {
-  const app = this;
+module.exports = function (app) {
   const config = app.get('authentication');
 
   // Set up authentication with the secret
