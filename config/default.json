@@ -1,5 +1,5 @@
 {
-  "host": "localhost",
+  "host": "https://stark-wave-24634.herokuapp.com/",
   "port": 3030,
   "public": "../public/",
   "paginate": {
