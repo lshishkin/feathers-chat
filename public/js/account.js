@@ -25,7 +25,8 @@ $(document).ready(
             var user = {
                 email: $('#email').val(),
                 password: $('#password').val(),
-                username: $('#username').val()
+                username: $('#username').val(),
+                isOnline: false
             }
             return user
         }

@@ -3,17 +3,16 @@ module.exports = function (app) {
     // If no real-time functionality has been configured just return
     return;
   }
-
   app.on('connection', connection => {
     // On a new real-time connection, add it to the anonymous channel
     app.channel('anonymous').join(connection);
   });
 
-  app.on('login', (authResult, { connection }) => {
+    app.on('login', (authResult, { connection }) => {
     // connection can be undefined if there is no
     // real-time connection, e.g. when logging in via REST
     if(connection) {
-      var { user } = connection;
+      const user = connection.user;
       // Obtain the logged in user from the connection
       // const user = connection.user;
 
@@ -42,15 +41,14 @@ module.exports = function (app) {
     }
   });
 
-    app.on('logout', (authResult, { connection })=>{
-        if(connection) {
-            var { user } = connection;
+  app.on('logout', ( result,meta)=>{
+    const user=meta.socket._feathers.user
+   
 
-            if( user.isOnline ) {
-                app.service('users').patch(user._id, {isOnline: false});
-            }
-        }
-    });
+     if(user) {
+               app.service('users').patch(user._id, {isOnline: false});
+     }
+   });
 
   // eslint-disable-next-line no-unused-vars
   app.publish((data, hook) => {

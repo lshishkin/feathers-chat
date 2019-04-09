@@ -42,8 +42,11 @@
     "cors": "^2.8.5",
     "feathers-authentication-hooks": "^0.3.1",
     "feathers-hooks-common": "^4.20.7",
+    "feathers-mongoose": "^7.3.2",
     "feathers-nedb": "^4.0.1",
     "helmet": "^3.16.0",
+    "mongodb-core": "^3.1.11",
+    "mongoose": "^5.4.10",
     "nedb": "^1.8.0",
     "serve-favicon": "^2.5.0",
     "winston": "^3.2.1"

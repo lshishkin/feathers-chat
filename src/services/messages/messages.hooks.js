@@ -1,22 +1,37 @@
 const { authenticate } = require('@feathersjs/authentication').hooks;
-const { setNow } = require('feathers-hooks-common');
+const { setNow, populate } = require('feathers-hooks-common');
 const hooks = require('feathers-authentication-hooks');
+
+const messagesSchema = {
+    include: {
+        service: 'users',
+        nameAs: 'user',
+        parentField: 'userId',
+        childField: '_id'
+    }
+};
 
 module.exports = {
   before: {
     all: [ authenticate('jwt') ],
     find: [],
     get: [],
-    create: [setNow('createdAt'),
-    hooks.associateCurrentUser()],
-    update: [hooks.restrictToOwner()],
-    patch: [hooks.restrictToOwner()],
-    remove: [hooks.restrictToOwner()
+    create: [
+        setNow('createdAt'),
+        hooks.associateCurrentUser()],
+    update: [
+        hooks.restrictToOwner()
+    ],
+    patch: [
+        hooks.restrictToOwner()
+    ],
+    remove: [
+        hooks.restrictToOwner()
     ]
   },
 
   after: {
-    all: [],
+    all: [ populate({schema: messagesSchema}) ],
     find: [],
     get: [],
     create: [],
