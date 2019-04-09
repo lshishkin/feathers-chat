@@ -1,8 +1,13 @@
 # chat-application
 
+Link to [heroku](https://stark-wave-24634.herokuapp.com/)
+
+Ссылка на [heroku](https://stark-wave-24634.herokuapp.com/)
+
 > 
 
 ## About
+Этот проект использует [Feathers](http://feathersjs.com). Вэб-фреймворк с открытым исходным кодом для создания современных real-time приложений
 
 This project uses [Feathers](http://feathersjs.com). An open source web framework for building modern real-time applications.
 
