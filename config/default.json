@@ -1,5 +1,5 @@
 {
-  "host": "https://stark-wave-24634.herokuapp.com/",
+  "host": "localhost",
   "port": 3030,
   "public": "../public/",
   "paginate": {
@@ -18,7 +18,7 @@
       "header": {
         "typ": "access"
       },
-      "audience": "https://yourdomain.com",
+      "audience": "https://stark-wave-24634.herokuapp.com/",
       "subject": "anonymous",
       "issuer": "feathers",
       "algorithm": "HS256",
