@@ -1,6 +1,6 @@
 $(document).ready(
     function () {
-        var serverurl = "http://localhost:3030"
+        var serverurl = "https://stark-wave-24634.herokuapp.com"
 
         /*
             Feathers boilerplate
