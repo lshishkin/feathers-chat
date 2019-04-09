@@ -2,7 +2,7 @@
   "name": "chat-application",
   "description": "",
   "version": "0.0.0",
-  "homepage": "",
+  "homepage": "https://stark-wave-24634.herokuapp.com",
   "main": "src",
   "keywords": [
     "feathers"
